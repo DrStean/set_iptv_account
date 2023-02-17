@@ -1,4 +1,5 @@
 #!/bin/bash
+echo "Open the account login menu in your STB"
 
 adb_path="/root/Android/Sdk/platform-tools/adb"
 
@@ -10,7 +11,6 @@ then
     exit
 fi
 
-echo "Open the account login menu in your STB"
 $adb_path connect $ip_address
 $adb_path -s $ip_address shell input text "abcd@gmail.com"
 $adb_path -s $ip_address shell input keyevent 66
